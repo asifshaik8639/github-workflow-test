@@ -1,0 +1,11 @@
+# Ignore files with .txt extension
+*.txt
+
+# Ignore directories named logs
+logs/
+
+# Ignore specific file
+config.json
+
+# Ignore files in a specific directory
+*.md
