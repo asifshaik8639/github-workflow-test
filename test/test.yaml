@@ -1,6 +1,6 @@
 ---
 - name: Deploy httpd
-  hosts: 44.204.227.188
+  hosts: 44.204.227.188, 172-31-83-239
   become: true
 
   tasks:
