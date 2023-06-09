@@ -27,5 +27,5 @@ jobs:
       - name: Run Ansible playbook
         run: ansible-playbook --version     
       - name: Run Ansible Playbook
-        run: /run_ansible.sh
+        run: ./run_ansible.sh
 
