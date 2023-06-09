@@ -19,7 +19,10 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Echo command to verify the connection with EC2
-        run: echo "Connected to EC2 asif Shaik on the Ansible controller"  
+        run: echo "Connected to EC2 asif Shaik on the Ansible controller"
+
+      - name: Install dependencies
+        run: sudo yum update -y && sudo yum install ansible -y
 
       - name: Run Ansible playbook
         run: ansible-playbook -i 44.204.227.188, apache-install.yml
