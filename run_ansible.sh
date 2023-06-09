@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook -i 44.204.227.188 ./test/test.yaml
+ansible-playbook -i 172-31-83-239 ./test/test.yaml
