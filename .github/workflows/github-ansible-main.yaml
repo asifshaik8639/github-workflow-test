@@ -22,7 +22,7 @@ jobs:
         run: echo "Connected to EC2 asif Shaik on the Ansible controller"
 
       - name: Install dependencies
-        run: sudo yum update -y && sudo yum install ansible -y
+        run: sudo yum update -y && sudo amazon-linux-extras install ansible2
 
       - name: Run Ansible playbook
         run: ansible-playbook -i 44.204.227.188, apache-install.yml
