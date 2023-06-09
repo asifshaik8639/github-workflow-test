@@ -26,10 +26,11 @@ jobs:
 
       - name: Run Ansible playbook
         run: ansible-playbook --version
-      - name: Ansible CLI
+      - name: Run Ansible playbook (with AWS support)
         # You may pin to the exact commit or the version.
-        # uses: tomasnorre/ansible-cli-client@bd08e0a19b445d0a2bc42877fdd7a2e9d632e8e3
-        uses: tomasnorre/ansible-cli-client@0.0.2
+        # uses: maurete/ansible-action@48e4301a78df1a4871d244d2740389cc6830e211
+        uses: maurete/ansible-action@v2
         with:
+          # Name of the playbook to execute.
           playbook: ../../test/test.yaml
 
