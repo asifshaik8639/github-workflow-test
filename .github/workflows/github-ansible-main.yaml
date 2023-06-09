@@ -25,4 +25,4 @@ jobs:
         run: sudo yum update -y && sudo amazon-linux-extras install ansible2
 
       - name: Run Ansible playbook
-        run: ansible-playbook -i ../../test/test.yaml
+        run: ansible-playbook --version
