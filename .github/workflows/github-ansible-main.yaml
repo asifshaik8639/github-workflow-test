@@ -26,11 +26,18 @@ jobs:
 
       - name: Run Ansible playbook
         run: ansible-playbook --version
-      - name: Run Ansible playbook (with AWS support)
-        # You may pin to the exact commit or the version.
-        # uses: maurete/ansible-action@48e4301a78df1a4871d244d2740389cc6830e211
-        uses: maurete/ansible-action@v2
-        with:
-          # Name of the playbook to execute.
-          playbook: ../../test/test.yaml
+      - name: Install and start Apache HTTP Server
+        hosts: 44.204.227.188
+        become: true
+        tasks:
+          - name: Install httpd package
+            package:
+              name: httpd
+              state: present
+
+          - name: Start httpd service
+            service:
+              name: httpd
+              state: started
+
 
