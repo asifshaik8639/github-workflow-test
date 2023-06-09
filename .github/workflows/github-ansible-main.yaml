@@ -25,19 +25,7 @@ jobs:
         run: sudo yum update -y && sudo amazon-linux-extras install ansible2
 
       - name: Run Ansible playbook
-        run: ansible-playbook --version
-      - name: Install and start Apache HTTP Server
-        hosts: 44.204.227.188
-        become: true
-        tasks:
-          - name: Install httpd package
-            package:
-              name: httpd
-              state: present
-
-          - name: Start httpd service
-            service:
-              name: httpd
-              state: started
-
+        run: ansible-playbook --version     
+      - name: Run Ansible Playbook
+        run: ./run_ansible.sh
 
