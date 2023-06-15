@@ -24,7 +24,7 @@ resource "aws_instance" "nginx" {
 }
 
 resource "aws_security_group" "example" {
-  name        = "example-security-group"
+  name        = "example-security-group-success"
   description = "Example Security Group"
 
   ingress {
